@@ -51,12 +51,17 @@ var setupTabHandlers = function() {
 
 var setupContactClassHandler = function() {
     var $window = $(window);
+    var $contactBoxes = $('.contact .info-box');
+    var $inlines = $contactBoxes.filter('inline');
+    var $notFills = $contactBoxes.filter(function(i, e) { return !$(e).hasClass('fill-width'); });
 
     var checkContact = function(e) {
         if($window.width() < 600) {
-
+            $contactBoxes.removeClass('inline').removeClass('left').removeClass('right');
+            $contactBoxes.addClass('fill-width');
         } else {
-
+            $inlines.addClass('inline');
+            $notFills.removeClass('fill-width');
         }
     };
 
