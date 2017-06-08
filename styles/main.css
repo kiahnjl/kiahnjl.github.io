@@ -38,7 +38,8 @@ ul.info-box-content li { padding: 5px 0; }
 .tab.active { border-bottom: 3px solid #2196f3; }
 
 .contact { width: 400px; border-radius: 10px; background: #fff; }
-.contact .info-box, .contact .info-submit { width: 200px; padding: 10px 5px; box-sizing: border-box; }
+.contact .info-box, .contact .info-submit { padding: 10px 5px; box-sizing: border-box; }
+.contact .info-box { width: 200px; }
 .contact .info-box.inline { display: inline-block; }
 
 .contact .info-box.right { float:right; }
@@ -71,11 +72,13 @@ ul.info-box-content li { padding: 5px 0; }
 .hoz-divider-pad { margin: 30px 80px 50px 80px; }
 .hoz-divider-no-base-pad { margin: 30px 80px 0 80px; }
 .section-center { width: 900px; margin: auto; }
-.l-r-padding { box-sizing: border-box; padding: 0 50px; } /* bad sideeffect? */
+.other-info { box-sizing: border-box; padding: 0 50px; } /* bad sideeffect? */
+.between-other-and-form { display: none; }
 
 footer { position: relative; height: 80px; line-height: 80px;  }
 footer .links-wrapper { text-align: center; }
-footer .links-wrapper a { font-size: 20px; padding: 0 20px; }
+footer .links-wrapper a { font-size: 20px; padding: 0 20px; transition: letter-spacing 400ms; }
+footer .links-wrapper a:hover { letter-spacing: 1px; }
 
 /* queries should probably not be globally configured */
 @media(min-width: 970px) {
@@ -101,4 +104,7 @@ footer .links-wrapper a { font-size: 20px; padding: 0 20px; }
     .info-nav .nav-arrow-left, .info-nav .nav-arrow-right { display: inline-block; }
     .info-boxes .info-box { text-align: center; padding: 5px 5px;  }
     .info-boxes .info-box .heading { width: 100%; border: none; margin: 0; }
+    .other-info { padding: 0 7px; }
+    .contact .submit { width: 100%; }
+    .between-other-and-form { display: block; }
 }
