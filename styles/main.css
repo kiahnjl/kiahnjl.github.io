@@ -61,10 +61,8 @@ ul.info-box-content li { padding: 5px 0; }
     border: none; background: #2196f3; cursor: pointer; transition: opacity 200ms, letter-spacing 400ms; }
 .contact .submit:hover { letter-spacing: 1px; }
 
-.invalid input, .invalid textarea { border-color: red; }
-.invalid input::-webkit-input-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, input:-moz-placeholder {
-    color: red;
-}
+.invalid input, .invalid textarea { border-color: red !important; }
+.valid input, .valid textarea { border-color: #51d453 !important; }
 
 .two-column .column-1 { float: left; max-width: 50%; }
 .two-column .column-2 { float: right; max-width: 50%; }

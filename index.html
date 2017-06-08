@@ -78,30 +78,30 @@
                 (This has been authorised by MTU already).
             </p>
             <hr class="hoz-divider-no-base-pad between-other-and-form"/>
-            <form class="contact column-2">
+            <form action="/posted" method="post" class="contact column-2">
                 <div class="info-box inline">
-                    <input class="one-line" placeholder="First Name" type="text" />
+                    <input name="first_name" class="one-line" placeholder="First Name" type="text" />
                 </div>
                 <div class="info-box inline right">
-                    <input class="one-line" placeholder="Last Name" type="text" />
+                    <input name="last_name" class="one-line" placeholder="Last Name" type="text" />
                 </div>
                 <div class="info-box fill-width">
-                    <input class="one-line" placeholder="Organisation" type="text" />
+                    <input name="organisation" class="one-line" placeholder="Organisation" type="text" />
                 </div>
                 <div class="info-box">
-                    <input class="one-line" placeholder="Contact Email" type="text" />
+                    <input name="email" class="one-line" placeholder="Contact Email" type="text" />
                 </div>
                 <div class="info-box">
-                    <input class="one-line" placeholder="Contact Number" type="text" />
+                    <input name="number" class="one-line" placeholder="Contact Number" type="text" />
                 </div>
                 <div class="info-box">
-                    <input class="one-line" placeholder="Urgency for services" type="text" />
+                    <input name="urgency" class="one-line" placeholder="Urgency for services" type="text" />
                 </div>
                 <div class="info-box fill-width">
-                    <textarea class="few-lines" placeholder="Reason for contact"></textarea>
+                    <textarea name="reason" class="few-lines" placeholder="Reason for contact"></textarea>
                 </div>
                 <div class="info-box fill-width">
-                    <textarea class="few-lines" placeholder="Current concerns and risks"></textarea>
+                    <textarea name="concerns" class="few-lines" placeholder="Current concerns and risks"></textarea>
                 </div>
                 <div class="info-submit">
                     <button class="submit">Contact</button>

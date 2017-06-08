@@ -69,9 +69,45 @@ var setupContactClassHandler = function() {
     checkContact();
 };
 
+var contactSubmitHandler = function() {
+    var $contactForm = $('form.contact');
+    var $fields = $('.contact .info-box > textarea, input');
+
+    var checkFields = function(e) {
+        var invalidCount = 0;
+        $fields.each(function(i, e) {
+            var $input = $(e);
+            if($input.val().length === 0) {
+                $input.parent().addClass('invalid');
+                invalidCount++;
+            } else {
+                $input.parent().addClass('valid');
+            }
+        });
+
+        if(invalidCount > 0) {
+            e.preventDefault();
+        } else {
+            this.submit();
+        }
+    };
+
+    var removeAllValidaity = function() {
+        $fields.removeClass('valid').removeClass('invalid');
+    };
+
+    var removeValidaityView = function(e) {
+        $(e.target).parent().removeClass('valid').removeClass('invalid');
+    };
+
+    $fields.on('keydown', removeValidaityView);
+    $contactForm.submit(checkFields);
+};
+
 
 $(document).ready(function() {
     setupTabHandlers();
     setupContactClassHandler();
+    contactSubmitHandler();
 });
 
