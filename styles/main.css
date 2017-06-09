@@ -16,8 +16,8 @@ header .logo { float: left; height: 100px; width: 100px; }
 .info-boxes .info-box .heading { display: inline-block; padding-bottom: 12px; border-bottom: 3px;
     border-bottom-style: solid; border-bottom-color: #2196f3; }
 
-.info-nav .nav-arrow-left, .info-nav .nav-arrow-right { padding: 16px; transition: opacity 300ms; cursor: pointer; background: none;
-    border: none; opacity: 0.5; }
+.info-nav .nav-arrow-left, .info-nav .nav-arrow-right { padding: 16px; transition: opacity 300ms; cursor: pointer;
+    background: none; border: none; opacity: 0.5; }
 .info-nav .nav-arrow-left:hover, .info-nav .nav-arrow-right:hover { opacity: 1; }
 .info-nav .nav-arrow-left.hide, .info-nav .nav-arrow-right.hide { display: none; }
 .info-nav .nav-arrow-left { float: left; }
