@@ -1,3 +1,9 @@
-# [My Website](http://kiahnjl.github.io)
+# [My Website](https://kiahnjl.github.io)
 
-I will make a website here with my resume and short written section on the projects I hope to work on.
+## Goals
+
+- Showcase my projects
+- Demonstrate UI/UX design
+- Link to Linkedin, Resume, freelance etc
+- About me/Contact
+- Blog/notes/helpful material
