@@ -4,6 +4,6 @@
 
 - Showcase my projects
 - Demonstrate UI/UX design
-- Link to Linkedin, Resume, freelance etc
+- Link to LinkedIn, Resume, freelance etc
 - About me/Contact
 - Blog/notes/helpful material

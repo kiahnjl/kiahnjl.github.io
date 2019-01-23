@@ -1,26 +1,3 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(0,0,0,0.8);
-}
-
-.profile_section {
-    padding: 15px;
-    box-shadow: 0px 1px 1px 1px #a9a9a9;
-    text-align: center;
-}
-
-.profile_icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-.profile_name {
-    font-size: 2rem;
-}
-
-.profile_icon + .profile_name {
-    margin-top: 10px;
+.resume-wrapper { box-sizing: border-box; width: 100%; max-width: 700px;
+    padding: 0 20px; margin: auto;
 }
