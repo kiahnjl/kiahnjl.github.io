@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px;
+}
+
+.mag-page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mag-page {
+    width: 72vh;
+    max-width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.mag-cover-page {
+    position: relative;
+}
+
+.mag-about-page {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 50px 40px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.mag-logo {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: calc(100% - 150px);
+    max-width: 500px;
+}
+
+.mag-bg {
+    height: 100%;
+}
+
+.text-divider {
+    width: 50%;
+    height: 1px;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+.text-divider-fill {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
