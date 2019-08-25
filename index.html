@@ -48,7 +48,7 @@
                         <form action="https://eepurl.us3.list-manage.com/subscribe/post?u=ae4fe86ef3183d0ed0ccdf13f&amp;id=78ad46bb17" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div class="subscribe-field-spacer">
                             <div class="first-name-text-field mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
-                                <input name="EMAIL" type="text" class="mdc-text-field__input" placeholder="First name" required>
+                                <input name="FNAME" type="text" class="mdc-text-field__input" placeholder="First name" required>
                             </div>
                             <div class="mdc-text-field-helper-line">
                                 <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">*Required</p>
@@ -75,10 +75,10 @@
                         </form>
                     </div>
                     <footer class="mdc-dialog__actions">
-                        <button type="button" class="subscribe-button-cancel mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                        <button type="button" class="subscribe-button-cancel mdc-button mdc-dialog__button" data-mdc-dialog-action="close" data-mdc-auto-init="MDCRipple">
                             <span class="mdc-button__label">Cancel</span>
                         </button>
-                        <button type="button" class="subscribe-button-confirm mdc-button mdc-button--raised mdc-dialog__button" data-mdc-dialog-action="accept" disabled>
+                        <button type="button" class="subscribe-button-confirm mdc-button mdc-button--raised mdc-dialog__button" data-mdc-dialog-action="accept" disabled data-mdc-auto-init="MDCRipple">
                             <span class="mdc-button__label">OK</span>
                         </button>
                     </footer>
@@ -111,7 +111,7 @@
                 var areInputsValid = function() {
                     return firstNameField.input_.value.length > 0 &&
                         lastNameField.input_.value.length > 0 &&
-                        !!emailField.input_.value.match(/^.+@.+$/);
+                        !!emailField.input_.value.match(/^.+@.+\..+$/);
                 };
 
                 var onInputChange = function() {

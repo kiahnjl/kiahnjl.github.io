@@ -102,6 +102,12 @@ body {
 .subscribe-button-container {
     margin-top: 40px;
 }
+.subscribe-button {
+    --mdc-theme-primary: #000;
+}
 .subscribe-field-spacer {
     margin: 20px 0;
+}
+.subscribe-dialog {
+    --mdc-theme-primary: #000;
 }
