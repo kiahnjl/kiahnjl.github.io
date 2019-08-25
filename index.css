@@ -83,6 +83,10 @@ body {
     width: 100%;
 }
 
+.mag-title-text {
+    font-style: italic;
+}
+
 .ig-logo-link {
     display: block;
     margin: auto;
