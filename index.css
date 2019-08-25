@@ -96,6 +96,9 @@ body {
     background-size: contain;
 }
 
+.ig-button-container {
+    margin-top: 80px;
+}
 .subscribe-button-container {
     margin-top: 40px;
 }

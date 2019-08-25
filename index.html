@@ -25,13 +25,16 @@
 <div class="page page-outer-center">
     <div class="page-inner-center"><h2 class="content-heading">Download Issue 1</h2> <a class="mag-link" target="_blank"
                                                                                         href="./countermagazine-issue-1.pdf">
-        <img class="mag-img" src="./assets/countermagazine-preview.jpg"/> </a> <a class="ig-logo ig-logo-link"
-                                                                                  target="_blank"
-                                                                                  href="https://www.instagram.com/countermagazine/"></a>
+        <img class="mag-img" src="./assets/countermagazine-preview.jpg"/></a>
         <div class="subscribe-button-container">
             <button class="subscribe-button mdc-button mdc-button--raised" data-mdc-auto-init="MDCRipple">
                 <span class="mdc-button__label">Subscribe</span>
             </button>
+        </div>
+        <div class="ig-button-container">
+            <a class="ig-logo ig-logo-link"
+               target="_blank"
+               href="https://www.instagram.com/countermagazine/"></a>
         </div>
         <div class="subscribe-dialog mdc-dialog"
              role="alertdialog"
@@ -42,42 +45,40 @@
                 <div class="mdc-dialog__surface">
                     <h2 class="mdc-dialog__title" id="my-dialog-title">Subscribe to mailing list</h2>
                     <div class="mdc-dialog__content" id="my-dialog-content">
+                        <form action="https://eepurl.us3.list-manage.com/subscribe/post?u=ae4fe86ef3183d0ed0ccdf13f&amp;id=78ad46bb17" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div class="subscribe-field-spacer">
-                            <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                                <input type="text" id="my-text-field1" class="mdc-text-field__input">
-                                <label class="mdc-floating-label" for="my-text-field1">First Name</label>
-                                <div class="mdc-line-ripple"></div>
+                            <div class="first-name-text-field mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input name="EMAIL" type="text" class="mdc-text-field__input" placeholder="First name" required>
                             </div>
                             <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Optional</p>
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">*Required</p>
                             </div>
                         </div>
                         <div class="subscribe-field-spacer">
-                            <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                                <input type="text" id="my-text-field2" class="mdc-text-field__input">
-                                <label class="mdc-floating-label" for="my-text-field2">Last Name</label>
-                                <div class="mdc-line-ripple"></div>
+                            <div class="last-name-text-field mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input name="LNAME" type="text" class="mdc-text-field__input" placeholder="Last name" required>
                             </div>
                             <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Optional</p>
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">*Required</p>
                             </div>
                         </div>
                         <div class="subscribe-field-spacer">
-                            <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                                <input type="text" id="my-text-field3" class="mdc-text-field__input">
-                                <label class="mdc-floating-label" for="my-text-field3">Email</label>
-                                <div class="mdc-line-ripple"></div>
+                            <div class="email-text-field mdc-text-field mdc-text-field--fullwidth" data-mdc-auto-init="MDCTextField">
+                                <input name="EMAIL" type="text" class="mdc-text-field__input" placeholder="Email" required>
                             </div>
                             <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Required</p>
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">*Required</p>
                             </div>
                         </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ae4fe86ef3183d0ed0ccdf13f_78ad46bb17" tabindex="-1" value=""></div>
+                        </form>
                     </div>
                     <footer class="mdc-dialog__actions">
                         <button type="button" class="subscribe-button-cancel mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
                             <span class="mdc-button__label">Cancel</span>
                         </button>
-                        <button type="button" class="subscribe-button-confirm mdc-button mdc-button--raised mdc-dialog__button" data-mdc-dialog-action="accept">
+                        <button type="button" class="subscribe-button-confirm mdc-button mdc-button--raised mdc-dialog__button" data-mdc-dialog-action="accept" disabled>
                             <span class="mdc-button__label">OK</span>
                         </button>
                     </footer>
@@ -90,16 +91,37 @@
             window.mdc.autoInit();
         </script>
         <script type="text/javascript">
-            var dialog = new mdc.dialog.MDCDialog(document.querySelector('.subscribe-dialog'));
-            var sb = document.querySelector(".subscribe-button");
-            var sbcancel = document.querySelector(".subscribe-button-cancel");
+            (function() {
+                var subscribeDialog = new mdc.dialog.MDCDialog(document.querySelector('.subscribe-dialog'));
+                var firstNameField = new mdc.textField.MDCTextField(document.querySelector('.first-name-text-field'));
+                var lastNameField = new mdc.textField.MDCTextField(document.querySelector('.last-name-text-field'));
+                var emailField = new mdc.textField.MDCTextField(document.querySelector('.email-text-field'));
 
-            sb.addEventListener("click", function() {
-                dialog.open();
-            });
-            sbcancel.addEventListener("click", function() {
-                dialog.close();
-            });
+                var openSubscribeDialog = document.querySelector(".subscribe-button");
+                var confirmSubscribe = document.querySelector(".subscribe-button-confirm");
+                var subscribeForm = document.forms["mc-embedded-subscribe-form"];
+
+                openSubscribeDialog.addEventListener("click", function() {
+                    subscribeDialog.open();
+                });
+                confirmSubscribe.addEventListener("click", function() {
+                    subscribeForm.submit();
+                });
+
+                var areInputsValid = function() {
+                    return firstNameField.input_.value.length > 0 &&
+                        lastNameField.input_.value.length > 0 &&
+                        !!emailField.input_.value.match(/^.+@.+$/);
+                };
+
+                var onInputChange = function() {
+                    confirmSubscribe.disabled = !areInputsValid();
+                };
+
+                firstNameField.input_.addEventListener("input", onInputChange);
+                lastNameField.input_.addEventListener("input", onInputChange);
+                emailField.input_.addEventListener("input", onInputChange);
+            })()
         </script>
     </div>
 </div>
