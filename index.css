@@ -76,7 +76,7 @@ body {
 .mag-link {
     display: block;
     width: 200px;
-    margin: 60px auto;
+    margin: 40px auto;
 }
 
 .mag-img {
@@ -94,4 +94,11 @@ body {
     border-radius: 50%;
     background: url(./assets/instagram-logo.png) center center no-repeat;
     background-size: contain;
+}
+
+.subscribe-button-container {
+    margin-top: 40px;
+}
+.subscribe-field-spacer {
+    margin: 20px 0;
 }
